@@ -1,12 +1,11 @@
-
-:root{--bg1:#fff0f6;--bg2:#ffd3e5;--win:#fffafc;--ink:#4a2437;--mut:#8d5f77;--pink:#f48fb1;--deep:#d6578a;--line:#f6c6d9;--chip:#ffe9f1;--bar:rgba(255,244,249,.78);
+:root{--font-body:"Quicksand","Nunito",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;--font-script:"Dancing Script","Snell Roundhand","Brush Script MT",cursive;--bg1:#fff0f6;--bg2:#ffd3e5;--win:#fffafc;--ink:#4a2437;--mut:#8d5f77;--pink:#f48fb1;--deep:#d6578a;--line:#f6c6d9;--chip:#ffe9f1;--bar:rgba(255,244,249,.78);
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;overflow:hidden}
-body{font-family:"Quicksand","Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg1);user-select:none}
+body{font-family:var(--font-body);font-synthesis:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;color:var(--ink);background:var(--bg1);user-select:none}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bar);z-index:300}
-button{font-family:inherit}
+button,input,textarea,select{font-family:inherit}
 /* wallpaper */
 #wall{position:fixed;inset:0;background:radial-gradient(circle at 20% 15%,#fff 0,transparent 40%),radial-gradient(circle at 85% 80%,#ffc2dc 0,transparent 45%),linear-gradient(135deg,var(--bg1),var(--bg2));animation:drift 14s ease-in-out infinite alternate;background-size:140% 140%}
 @keyframes drift{to{background-position:100% 100%}}
@@ -121,7 +120,7 @@ a{color:var(--deep);font-weight:700}
 .photo small{position:absolute;bottom:0;left:0;right:0;background:rgba(214,87,138,.85);color:#fff;font-size:11px;padding:7px 0 12px;opacity:0;transition:opacity .2s}
 .photo:hover small{opacity:1}
 .tag{font-weight:700;font-size:17px;color:var(--deep)}.sub2{color:var(--mut);font-size:13px}
-.big{font-family:"Snell Roundhand","Brush Script MT",cursive;font-size:clamp(34px,5.2vw,58px);color:var(--deep);line-height:1.2}
+.big{font-family:var(--font-script);font-size:clamp(34px,5.2vw,58px);color:var(--deep);line-height:1.2}
 .wave{display:inline-block;font-size:clamp(30px,4vw,44px);margin-right:10px;transform-origin:70% 80%;animation:wave 1.8s 1s infinite}
 @keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(16deg)}20%,40%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
 .caret{display:inline-block;width:3px;height:.9em;background:var(--deep);margin-left:4px;vertical-align:middle;animation:blink 1s steps(2) infinite}
@@ -151,7 +150,7 @@ a{color:var(--deep);font-weight:700}
 .award::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:shine 3.5s 1.2s infinite}
 @keyframes shine{to{left:140%}}
 .award .m{font-size:60px;animation:float 3s ease-in-out infinite}
-.award .y{font-size:48px;font-weight:800;color:var(--deep);line-height:1.1}
+.award .y{font-size:48px;font-weight:700;color:var(--deep);line-height:1.1}
 .award b{display:block;font-size:17px}.award small{color:var(--mut)}
 .job{display:flex;gap:24px;align-items:flex-start;background:var(--chip);border:1px solid var(--line);border-radius:22px;padding:28px;margin-top:10px}
 .jico{display:grid;place-items:center;width:84px;height:84px;border-radius:24px;background:linear-gradient(135deg,#ffd0e2,var(--pink));font-size:40px;box-shadow:0 10px 24px rgba(214,87,138,.3);animation:float 3s ease-in-out infinite}
@@ -220,12 +219,12 @@ a{color:var(--deep);font-weight:700}
 .sc.on{opacity:1;transform:none;pointer-events:auto}
 .rt{position:absolute;left:47%;right:4%;top:0;bottom:0;display:flex;align-items:center}
 .rt .in{width:100%}
-.hello{position:absolute;left:0;right:0;top:11%;text-align:center;font-family:"Snell Roundhand","Brush Script MT",cursive;font-size:clamp(34px,5vw,56px);color:var(--deep);opacity:0;filter:blur(10px)}
+.hello{position:absolute;left:0;right:0;top:11%;text-align:center;font-family:var(--font-script);font-size:clamp(34px,5vw,56px);color:var(--deep);opacity:0;filter:blur(10px)}
 .sc.on .hello{opacity:1;filter:none;transition:opacity 1s .6s,filter 1s .6s}
 .ln{opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;margin-bottom:12px;font-size:17px;color:var(--mut);font-weight:600}
 .sc.on .ln{opacity:1;transform:none;transition:opacity .7s calc(var(--i)*.38s + .5s),transform .7s calc(var(--i)*.38s + .5s)}
-.ln.ttl{font-family:"Snell Roundhand","Brush Script MT",cursive;font-size:clamp(30px,3.8vw,46px);color:var(--deep);font-weight:400;margin-bottom:4px}
-.ln.big2{font-size:clamp(26px,3.4vw,40px);font-weight:800;color:var(--ink);line-height:1.15}
+.ln.ttl{font-family:var(--font-script);font-size:clamp(30px,3.8vw,46px);color:var(--deep);font-weight:400;margin-bottom:4px}
+.ln.big2{font-size:clamp(26px,3.4vw,40px);font-weight:700;color:var(--ink);line-height:1.15}
 .tg{display:inline-block;background:var(--win);border:1px solid var(--line);color:var(--deep);border-radius:99px;padding:5px 14px;margin:3px 6px 3px 0;font-size:14px;font-weight:700}
 .sc.on .tg{animation:chipin .5s calc(var(--i)*.22s + .6s) backwards}
 @media (max-width:700px){#reel.play[data-p="l"] .pwrap{left:50%;top:22%;--sc:.62}#reel.play .pwrap{--sc:.95}

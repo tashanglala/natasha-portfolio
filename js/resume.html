@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natasha Nicole E. Remoto — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#d6578a;--ink:#3b2230;--mut:#7d5a6c;--line:#f0bfd3;--soft:#fff0f6;
+--font:"Quicksand","Nunito",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;background:#f6e9ef}
+body{font-family:var(--font);color:var(--ink);font-size:8.9pt;line-height:1.33;font-weight:500;
+-webkit-print-color-adjust:exact;print-color-adjust:exact;font-synthesis:none}
+.page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;padding:9mm 13mm 8mm}
+@media print{html,body{background:#fff}.page{margin:0;width:210mm;height:297mm;overflow:hidden}}
+
+header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:9px;border-bottom:2.4px solid var(--pink)}
+h1{margin:0;font-size:23pt;line-height:1.05;color:var(--pink);font-weight:700;letter-spacing:-.2px}
+.role{margin:5px 0 4px;font-weight:700;font-size:10.6pt;color:var(--ink);letter-spacing:.2px}
+.contact{color:var(--mut);font-size:8.6pt;line-height:1.5}
+.contact a{color:var(--mut);text-decoration:none}
+.contact .sep{color:var(--line);margin:0 4px}
+.photo{flex:none;width:25mm;height:25mm;border-radius:50%;border:2.4px solid var(--pink);overflow:hidden;display:grid;place-items:center;background:var(--soft);color:var(--pink);font-weight:700;font-size:20pt}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+section{margin-top:7px}
+h2{margin:0 0 4px;font-size:10pt;font-weight:700;color:var(--pink);text-transform:uppercase;letter-spacing:.9px;padding-bottom:2px;border-bottom:1px solid var(--line)}
+p{margin:0}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.row b{font-weight:700}
+.date{flex:none;color:var(--mut);font-size:8.6pt;font-weight:600;white-space:nowrap}
+.sub{color:var(--mut);font-weight:600}
+ul{margin:2px 0 0;padding-left:14px}
+li{margin:0 0 1px}
+li::marker{color:var(--pink)}
+.item{margin-bottom:3px}
+.item:last-child{margin-bottom:0}
+.tech{color:var(--mut);font-weight:600;font-size:8.6pt}
+.skills .r{display:flex;gap:6px;margin-bottom:1.5px}
+.skills .k{flex:none;width:27mm;font-weight:700;color:var(--ink)}
+.skills .v{flex:1}
+.certs .r{margin-bottom:2px}
+.certs b{font-weight:700}
+.note{color:var(--mut);font-size:8.4pt;margin-top:2px}
+a{color:var(--pink);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div>
+    <h1>Natasha Nicole E. Remoto</h1>
+    <div class="role">Web Developer &nbsp;|&nbsp; Cybersecurity Enthusiast &nbsp;|&nbsp; BSIT Student</div>
+    <div class="contact">
+      Polangui, Albay, Philippines<span class="sep">|</span><a href="mailto:natasharemoto@gmail.com">natasharemoto@gmail.com</a><br>
+      <a href="https://natasha-portfolio-livid.vercel.app/">natasha-portfolio-livid.vercel.app</a><span class="sep">|</span><a href="https://github.com/tashanglala">github.com/tashanglala</a><span class="sep">|</span><a href="https://www.linkedin.com/in/natasharemoto/">linkedin.com/in/natasharemoto</a>
+    </div>
+  </div>
+  <div class="photo"><img src="assets/profile.jpg" alt="Natasha Nicole E. Remoto" onerror="this.parentNode.textContent='NR'"></div>
+</header>
+
+<section>
+  <h2>Profile</h2>
+  <p>Fourth-year BS Information Technology student at Bicol University (Polangui Campus), specializing in cybersecurity and systems development. I build responsive, security-minded web applications from real requirements, from a crime-reporting platform for PNP Polangui to a Wazuh SIEM home lab. Three-time Dean’s Lister and External Vice President of TechSystems Association. Seeking an OJT, entry-level web development or cybersecurity (SOC / blue team) role.</p>
+</section>
+
+<section class="skills">
+  <h2>Technical Skills</h2>
+  <div class="r"><span class="k">Web</span><span class="v">HTML, CSS, JavaScript, React Native, Responsive UI</span></div>
+  <div class="r"><span class="k">Backend &amp; Data</span><span class="v">Python, Flask, Node.js, Express, Firebase, MySQL, OpenCV, DeepFace</span></div>
+  <div class="r"><span class="k">Security</span><span class="v">Wazuh SIEM, OWASP Top 10, Nmap, Burp Suite, Wireshark, Linux, Networking</span></div>
+  <div class="r"><span class="k">Tools</span><span class="v">Git / GitHub, Vercel</span></div>
+  <div class="r"><span class="k">Professional</span><span class="v">Team leadership, technical writing, cross-organization coordination</span></div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="item">
+    <div class="row"><p><b>PMPS ARGUS</b> <span class="sub">— Capstone Project</span></p><span class="date tech">React Native · Firebase · Maps</span></div>
+    <ul><li>Secure crime reporting and interagency coordination platform for PNP Polangui, built from real stakeholder requirements.</li></ul>
+  </div>
+  <div class="item">
+    <div class="row"><p><b>Secure by Design</b> <span class="sub">— Web security demo</span></p><span class="date tech">Node.js · Express · OWASP Top 10</span></div>
+    <ul><li>Build → attack → patch web app that demonstrates OWASP Top 10 vulnerabilities and how to fix them.</li></ul>
+  </div>
+  <div class="item">
+    <div class="row"><p><b>Wazuh SIEM Home Lab</b> <span class="sub">— Blue-team practice</span></p><span class="date tech">Wazuh · SIEM · Linux</span></div>
+    <ul><li>Home lab for log collection, threat detection and alerting; my flagship SOC portfolio project.</li></ul>
+  </div>
+  <div class="item">
+    <div class="row"><p><b>PNP Face Match</b> <span class="sub">— <a href="https://github.com/tashanglala/pnp-face-match">GitHub</a></span></p><span class="date tech">Python · Flask · OpenCV · DeepFace</span></div>
+    <ul><li>Facial matching web application built with Flask and computer-vision libraries.</li></ul>
+  </div>
+  <div class="item">
+    <p><b>Other:</b> <b>VitalPath Medical</b> healthcare website (<a href="https://vitalpath-medical.vercel.app">live</a>) · <b>Student Resource Hub</b> Firebase academic resources app (<a href="https://student-resource-hub-9960d.web.app/">live</a>) · <b>Quizzleberry</b> Express/MySQL quiz app · <b>Client Website</b> responsive site built from a real client brief.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="row"><p><b>Administrative Aide II (SPES Program)</b> <span class="sub">— Supply Office, Municipality of Polangui</span></p><span class="date">2025 – 2026</span></div>
+  <ul><li>Supported day-to-day Supply Office operations through administrative work.</li><li>Stepped in on IT support for the office.</li></ul>
+</section>
+
+<section>
+  <h2>Leadership &amp; Organizations</h2>
+  <div class="row"><p><b>External Vice President</b> <span class="sub">— TechSystems Association (TSA)</span></p><span class="date">Aug 2026 – present</span></div>
+  <div class="row"><p><b>Programming Committee Developer</b> <span class="sub">— TSA</span></p><span class="date">Oct 2026 – present</span></div>
+  <div class="row"><p><b>Acting Head, External Vice President</b> <span class="sub">— TSA</span></p><span class="date">Feb 2026 – Aug 2026</span></div>
+  <div class="row"><p><b>Member</b> <span class="sub">— Google Developer Group On Campus, Bicol University</span></p><span class="date">Oct 2026 – present</span></div>
+  <div class="row"><p><b>Member</b> <span class="sub">— For Girls Who Build PH (FGWB PH)</span></p><span class="date">Oct 2026 – present</span></div>
+  <div class="row"><p><b>Member</b> <span class="sub">— BU SYNC (mother org in CSD, BUP)</span></p><span class="date">Aug 2026 – present</span></div>
+  <div class="row"><p><b>Participant</b> <span class="sub">— CNCP: Cyber Ops</span></p><span class="date">Oct 2026</span></div>
+</section>
+
+<section>
+  <h2>Education &amp; Awards</h2>
+  <div class="row"><p><b>BS Information Technology</b> <span class="sub">— Bicol University, Polangui Campus</span></p><span class="date">Class of 2026</span></div>
+  <ul><li>Specialization: cybersecurity and systems development.</li><li>Dean’s Lister: 2024, 2025, 2026.</li></ul>
+</section>
+
+<section class="certs">
+  <h2>Certifications (16)</h2>
+  <div class="r"><b>Security:</b> Ethical Hacker · Introduction to Cybersecurity · Network Support and Security · Digital Safety and Security Awareness</div>
+  <div class="r"><b>Web &amp; Programming:</b> JavaScript Essentials 1 &amp; 2 · Python Essentials 1 &amp; 2 · HTML Essentials · CSS Essentials</div>
+  <div class="r"><b>Data, AI &amp; IT:</b> Data Science Essentials with Python · Data Analytics Essentials · Introduction to Modern AI · IT Customer Support Basics · Digital Awareness · Computer Hardware Basics</div>
+  <div class="note">Issued by Cisco Networking Academy (with DICT-ITU DTC Initiative, JS Institute and Python Institute), 2025–2026. Certificate images on my portfolio.</div>
+</section>
+
+</div>
+</body>
+</html>

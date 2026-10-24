@@ -1,4 +1,3 @@
-
 (function(){
 var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
 var z=100,mob=function(){return innerWidth<=700},T=[];
