@@ -10,25 +10,25 @@
 <style>
 :root{--pink:#d6578a;--ink:#3b2230;--mut:#7d5a6c;--line:#f0bfd3;--soft:#fff0f6;
 --font:"Quicksand","Nunito",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-@page{size:A4;margin:0}
+@page{size:A4;margin:11mm 13mm 12mm}
 *{box-sizing:border-box}
 html,body{margin:0;background:#f6e9ef}
-body{font-family:var(--font);color:var(--ink);font-size:8.9pt;line-height:1.33;font-weight:500;
+body{font-family:var(--font);color:var(--ink);font-size:9.7pt;line-height:1.42;font-weight:500;
 -webkit-print-color-adjust:exact;print-color-adjust:exact;font-synthesis:none}
 .page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;padding:9mm 13mm 8mm}
-@media print{html,body{background:#fff}.page{margin:0;width:210mm;height:297mm;overflow:hidden}}
+@media print{html,body{background:#fff}.page{width:auto;min-height:0;height:auto;margin:0;padding:0;overflow:visible}}
 
 header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:9px;border-bottom:2.4px solid var(--pink)}
-h1{margin:0;font-size:23pt;line-height:1.05;color:var(--pink);font-weight:700;letter-spacing:-.2px}
+h1{margin:0;font-size:25pt;line-height:1.05;color:var(--pink);font-weight:700;letter-spacing:-.2px}
 .role{margin:5px 0 4px;font-weight:700;font-size:10.6pt;color:var(--ink);letter-spacing:.2px}
 .contact{color:var(--mut);font-size:8.6pt;line-height:1.5}
 .contact a{color:var(--mut);text-decoration:none}
 .contact .sep{color:var(--line);margin:0 4px}
-.photo{flex:none;width:25mm;height:25mm;border-radius:50%;border:2.4px solid var(--pink);overflow:hidden;display:grid;place-items:center;background:var(--soft);color:var(--pink);font-weight:700;font-size:20pt}
+.photo{flex:none;width:28mm;height:28mm;border-radius:50%;border:2.4px solid var(--pink);overflow:hidden;display:grid;place-items:center;background:var(--soft);color:var(--pink);font-weight:700;font-size:20pt}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
 
-section{margin-top:7px}
-h2{margin:0 0 4px;font-size:10pt;font-weight:700;color:var(--pink);text-transform:uppercase;letter-spacing:.9px;padding-bottom:2px;border-bottom:1px solid var(--line)}
+section{margin-top:13px}.item,.row,li{break-inside:avoid}
+h2{break-after:avoid;margin:0 0 4px;font-size:10pt;font-weight:700;color:var(--pink);text-transform:uppercase;letter-spacing:.9px;padding-bottom:2px;border-bottom:1px solid var(--line)}
 p{margin:0}
 .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .row b{font-weight:700}
@@ -37,7 +37,7 @@ p{margin:0}
 ul{margin:2px 0 0;padding-left:14px}
 li{margin:0 0 1px}
 li::marker{color:var(--pink)}
-.item{margin-bottom:3px}
+.item{margin-bottom:7px}
 .item:last-child{margin-bottom:0}
 .tech{color:var(--mut);font-weight:600;font-size:8.6pt}
 .skills .r{display:flex;gap:6px;margin-bottom:1.5px}
@@ -47,6 +47,24 @@ li::marker{color:var(--pink)}
 .certs b{font-weight:700}
 .note{color:var(--mut);font-size:8.4pt;margin-top:2px}
 a{color:var(--pink);text-decoration:none;font-weight:600}
+
+.cf{margin:0 0 2px}.cf b{font-weight:700}.cf .s{color:var(--mut);font-weight:600}
+.cg{break-inside:avoid;margin-top:5px}
+.cg h3{margin:0 0 2px;font-size:8.8pt;font-weight:700;color:var(--pink);letter-spacing:.2px}
+.cl{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;row-gap:1.5px}
+.ce{display:flex;justify-content:space-between;align-items:baseline;gap:8px;break-inside:avoid}
+.ce .t{font-weight:600}
+.ce .d{flex:none;color:var(--mut);font-size:8.2pt;font-weight:600;white-space:nowrap}
+.certs{break-before:page;margin-top:0}
+.certs h2{font-size:11pt}
+.cf{margin:0 0 4px;font-size:9.4pt}
+.cg{margin-top:11px}
+.cg h3{font-size:9.4pt;margin-bottom:4px}
+.cl{row-gap:4px;column-gap:22px;font-size:9.2pt}
+.ce .d{font-size:8.6pt}
+.note{margin-top:12px}
+@media screen{.certs{margin-top:18px;padding-top:6px}}
+.skills .r{margin-bottom:3px}.skills .k{width:30mm}.date{font-size:9pt}.contact{font-size:9pt}ul{margin-top:3px}li{margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -66,7 +84,7 @@ a{color:var(--pink);text-decoration:none;font-weight:600}
 
 <section>
   <h2>Profile</h2>
-  <p>Fourth-year BS Information Technology student at Bicol University (Polangui Campus), specializing in cybersecurity and systems development. I build responsive, security-minded web applications from real requirements, from a crime-reporting platform for PNP Polangui to a Wazuh SIEM home lab. Three-time Dean’s Lister and External Vice President of TechSystems Association. Seeking an OJT, entry-level web development or cybersecurity (SOC / blue team) role.</p>
+  <p>Fourth-year BS Information Technology student at Bicol University (Polangui Campus), specializing in cybersecurity and systems development. I build responsive, security-minded web applications from real requirements, from a crime-reporting platform for PNP Polangui to a Wazuh SIEM home lab. Completed HarvardX’s CS50 Introduction to Cybersecurity. Three-time Dean’s Lister and External Vice President of TechSystems Association. Seeking an OJT, entry-level web development or cybersecurity (SOC / blue team) role.</p>
 </section>
 
 <section class="skills">
@@ -107,16 +125,9 @@ a{color:var(--pink);text-decoration:none;font-weight:600}
   <ul><li>Supported day-to-day Supply Office operations through administrative work.</li><li>Stepped in on IT support for the office.</li></ul>
 </section>
 
-<section>
-  <h2>Leadership &amp; Organizations</h2>
-  <div class="row"><p><b>External Vice President</b> <span class="sub">— TechSystems Association (TSA)</span></p><span class="date">Aug 2026 – present</span></div>
-  <div class="row"><p><b>Programming Committee Developer</b> <span class="sub">— TSA</span></p><span class="date">Oct 2026 – present</span></div>
-  <div class="row"><p><b>Acting Head, External Vice President</b> <span class="sub">— TSA</span></p><span class="date">Feb 2026 – Aug 2026</span></div>
-  <div class="row"><p><b>Member</b> <span class="sub">— Google Developer Group On Campus, Bicol University</span></p><span class="date">Oct 2026 – present</span></div>
-  <div class="row"><p><b>Member</b> <span class="sub">— For Girls Who Build PH (FGWB PH)</span></p><span class="date">Oct 2026 – present</span></div>
-  <div class="row"><p><b>Member</b> <span class="sub">— BU SYNC (mother org in CSD, BUP)</span></p><span class="date">Aug 2026 – present</span></div>
-  <div class="row"><p><b>Participant</b> <span class="sub">— CNCP: Cyber Ops</span></p><span class="date">Oct 2026</span></div>
-</section>
+
+
+
 
 <section>
   <h2>Education &amp; Awards</h2>
@@ -125,11 +136,25 @@ a{color:var(--pink);text-decoration:none;font-weight:600}
 </section>
 
 <section class="certs">
-  <h2>Certifications (16)</h2>
-  <div class="r"><b>Security:</b> Ethical Hacker · Introduction to Cybersecurity · Network Support and Security · Digital Safety and Security Awareness</div>
-  <div class="r"><b>Web &amp; Programming:</b> JavaScript Essentials 1 &amp; 2 · Python Essentials 1 &amp; 2 · HTML Essentials · CSS Essentials</div>
-  <div class="r"><b>Data, AI &amp; IT:</b> Data Science Essentials with Python · Data Analytics Essentials · Introduction to Modern AI · IT Customer Support Basics · Digital Awareness · Computer Hardware Basics</div>
-  <div class="note">Issued by Cisco Networking Academy (with DICT-ITU DTC Initiative, JS Institute and Python Institute), 2025–2026. Certificate images on my portfolio.</div>
+  <h2>Licenses &amp; Certifications (19)</h2>
+  <div class="cf"><b>★ HarvardX</b> — CS50’s Introduction to Cybersecurity <span class="s">· Harvard University online learning initiative</span></div>
+  <div class="cf"><b>★ OPSWAT Academy</b> — Introduction to Critical Infrastructure Protection <span class="s">· 0.50 CPE credits</span></div>
+  <div class="cf"><b>★ ADB Institute</b> — Cybersecurity <span class="s">· Certificate of Completion</span></div>
+  <div class="cg"><h3>Cybersecurity · Cisco Networking Academy</h3><div class="cl"><div class="ce"><span class="t">Ethical Hacker</span><span class="d">Jun 2025</span></div><div class="ce"><span class="t">Introduction to Cybersecurity</span><span class="d">Jun 2025</span></div><div class="ce"><span class="t">Network Support and Security</span><span class="d">May 2026</span></div><div class="ce"><span class="t">Digital Safety and Security Awareness</span><span class="d">Mar 2026</span></div></div></div>
+  <div class="cg"><h3>Web &amp; Programming · Cisco Networking Academy</h3><div class="cl"><div class="ce"><span class="t">JavaScript Essentials 2</span><span class="d">Jul 2026</span></div><div class="ce"><span class="t">JavaScript Essentials 1</span><span class="d">Jul 2026</span></div><div class="ce"><span class="t">Python Essentials 2</span><span class="d">Jul 2026</span></div><div class="ce"><span class="t">Python Essentials 1</span><span class="d">Jul 2026</span></div><div class="ce"><span class="t">HTML Essentials</span><span class="d">Apr 2026</span></div><div class="ce"><span class="t">CSS Essentials</span><span class="d">Mar 2026</span></div></div></div>
+  <div class="cg"><h3>Data, AI &amp; IT · Cisco Networking Academy</h3><div class="cl"><div class="ce"><span class="t">Data Science Essentials with Python</span><span class="d">Mar 2026</span></div><div class="ce"><span class="t">Data Analytics Essentials</span><span class="d">Mar 2026</span></div><div class="ce"><span class="t">Introduction to Modern AI</span><span class="d">Jul 2025</span></div><div class="ce"><span class="t">IT Customer Support Basics</span><span class="d">May 2026</span></div><div class="ce"><span class="t">Digital Awareness</span><span class="d">Mar 2026</span></div><div class="ce"><span class="t">Computer Hardware Basics</span><span class="d">Jan 2025</span></div></div></div>
+  <div class="note">Cisco Networking Academy courses completed with the DICT-ITU DTC Initiative, JS Institute and Python Institute. Certificate images are on my portfolio.</div>
+</section>
+
+<section style="margin-top:14px">
+  <h2>Leadership &amp; Organizations</h2>
+  <div class="row"><p><b>External Vice President</b> <span class="sub">— TechSystems Association (TSA)</span></p><span class="date">Aug 2026 – present</span></div>
+  <div class="row"><p><b>Programming Committee Developer</b> <span class="sub">— TSA</span></p><span class="date">Oct 2026 – present</span></div>
+  <div class="row"><p><b>Acting Head, External Vice President</b> <span class="sub">— TSA</span></p><span class="date">Feb 2026 – Aug 2026</span></div>
+  <div class="row"><p><b>Member</b> <span class="sub">— Google Developer Group On Campus, Bicol University</span></p><span class="date">Oct 2026 – present</span></div>
+  <div class="row"><p><b>Member</b> <span class="sub">— For Girls Who Build PH (FGWB PH)</span></p><span class="date">Oct 2026 – present</span></div>
+  <div class="row"><p><b>Member</b> <span class="sub">— BU SYNC (mother org in CSD, BUP)</span></p><span class="date">Aug 2026 – present</span></div>
+  <div class="row"><p><b>Participant</b> <span class="sub">— CNCP: Cyber Ops</span></p><span class="date">Oct 2026</span></div>
 </section>
 
 </div>

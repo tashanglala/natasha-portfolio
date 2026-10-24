@@ -67,9 +67,13 @@ $$(".win").forEach(function(w){w.querySelectorAll(".chip,.btn").forEach(function
 var cfb=$$(".cfb"),ccs=$$(".cc");
 function filt(f){cfb.forEach(function(b){b.classList.toggle("on",b.dataset.f===f)});var n=0;
  ccs.forEach(function(c){var ok=f==="all"||c.dataset.k===f;c.classList.toggle("gone",!ok);if(ok){n++;c.style.animation="none";void c.offsetWidth;c.style.animation=""}});
+ var fh=$("#fh");if(fh)fh.classList.toggle("gone",!document.querySelector(".cc.hl:not(.gone)"));
  $("#cnt").textContent="Showing "+n+"."}
 cfb.forEach(function(b){b.addEventListener("click",function(){filt(b.dataset.f)})});filt("all");
 var CERT={
+ "CS50's Introduction to Cybersecurity": "assets/certificates/cs50-introduction-to-cybersecurity.jpg",
+ "Introduction to Critical Infrastructure Protection": "assets/certificates/introduction-to-critical-infrastructure-protection.jpg",
+ "Cybersecurity (ADB Institute)": "assets/certificates/adb-institute-cybersecurity.jpg",
  "IT Customer Support Basics": "assets/certificates/it-customer-support-basics.jpg",
  "Data Analytics Essentials": "assets/certificates/data-analytics-essentials.jpg",
  "Digital Safety and Security Awareness": "assets/certificates/digital-safety-and-security-awareness.jpg",

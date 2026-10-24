@@ -238,3 +238,18 @@ a{color:var(--deep);font-weight:700}
  .tb{cursor:default}
 }
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important}}
+
+/* featured achievements */
+.fh{font-weight:700;color:var(--deep);letter-spacing:.6px;text-transform:uppercase;font-size:13px;margin:6px 0 0!important}
+.fh.gone{display:none}
+.cc.hl{position:relative;overflow:clip;padding:20px 18px 16px;gap:5px;border:2px solid #e9b949;background:linear-gradient(135deg,#fff4d6 0%,#ffe3ef 55%,#ece4ff 100%);box-shadow:0 10px 24px rgba(233,185,73,.28),0 0 0 4px rgba(255,255,255,.65) inset}
+.cc.hl::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-18deg);animation:shine 4.5s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-70%}100%{left:135%}}
+.cc.hl .ci{font-size:40px;line-height:1.1}
+.cc.hl b{font-size:16.5px;color:var(--deep)}
+.cc.hl small{font-size:12.5px}
+.cc.hl .dt{align-self:flex-start;background:var(--deep);color:#fff;border-radius:99px;padding:3px 11px;margin-top:8px}
+.cc.hl .dt::after{content:" · view";color:#ffd9e8}
+.cc.hl .rb{position:absolute;top:10px;right:-30px;transform:rotate(35deg);background:linear-gradient(90deg,#f5c64d,#e9a82f);color:#5a3b00;font-size:10.5px;font-weight:700;letter-spacing:.5px;padding:3px 34px;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.cc.hl:hover{box-shadow:0 16px 30px rgba(233,185,73,.4),0 0 0 4px rgba(255,255,255,.65) inset}
+@media (prefers-reduced-motion:reduce){.cc.hl::after{animation:none}}
