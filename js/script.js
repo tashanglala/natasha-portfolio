@@ -115,8 +115,8 @@ document.addEventListener("click",function(){dd.classList.remove("on");$("#apple
 // résumé
 var msg=$("#msg");
 function dl(){
- var t=$("#toast"),a=document.createEassets/Natasha-Remoto-Resume-2026.pdflement("a");
- a.href="";a.download="Natasha-Remoto-Resume.pdf";document.body.appendChild(a);a.click();a.remove();
+ var t=$("#toast"),a=document.createElement("a");
+ a.href="assets/Natasha-Remoto-Resume-2026.pdf";a.download="Natasha-Remoto-Resume.pdf";document.body.appendChild(a);a.click();a.remove();
  msg.textContent="Résumé downloading ♡";t.textContent="Résumé downloading ♡";t.classList.add("in");setTimeout(function(){t.classList.remove("in")},2600)}
 function act(a,b){
  if(a==="hi")burst(b);else if(a==="dl")dl();
