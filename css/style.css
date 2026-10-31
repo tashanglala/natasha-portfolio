@@ -253,3 +253,29 @@ a{color:var(--deep);font-weight:700}
 .cc.hl .rb{position:absolute;top:10px;right:-30px;transform:rotate(35deg);background:linear-gradient(90deg,#f5c64d,#e9a82f);color:#5a3b00;font-size:10.5px;font-weight:700;letter-spacing:.5px;padding:3px 34px;box-shadow:0 2px 6px rgba(0,0,0,.18)}
 .cc.hl:hover{box-shadow:0 16px 30px rgba(233,185,73,.4),0 0 0 4px rgba(255,255,255,.65) inset}
 @media (prefers-reduced-motion:reduce){.cc.hl::after{animation:none}}
+
+/* mobile fixes: let grid rows size to their content so cards are never squished */
+.win .body{grid-auto-rows:max-content}
+.award{overflow:clip}
+
+/* ---- phone polish ---- */
+button,.btn,.cfb,.ic{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+@media (max-width:700px){
+ .win{height:calc(100vh - 140px);height:calc(100dvh - 140px)}
+ .win.max{max-height:calc(100dvh - 140px)}
+ .dot{width:18px;height:18px}
+ .tb{gap:10px}
+ #toast{top:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,220px);max-width:calc(100vw - 32px);padding:10px 14px;font-size:13px;text-align:center}
+ #toast.in{transform:translate(-50%,0)}
+ .award{padding:16px 14px}.award .m{font-size:38px}.award .y{font-size:34px}
+ #w-awards .body{gap:12px}
+ .btn{min-height:44px}
+ .cfb{min-height:38px}
+}
+@media (max-width:700px) and (max-height:520px){.win{height:calc(100dvh - 110px)}}
+@media (max-width:380px){
+ #dock{gap:3px;padding:5px 6px}
+ #dock button{width:36px;height:36px;font-size:18px}
+ .hello{font-size:30px;top:6%}
+ #reel.play[data-p="l"] .pwrap{top:25%}
+}

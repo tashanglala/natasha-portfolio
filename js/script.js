@@ -101,6 +101,7 @@ function step(d){var v=vis(),i=v.indexOf(cur);if(i<0||!v.length)return;showC(v[(
 ccs.forEach(function(c){c.tabIndex=0;c.addEventListener("click",function(){openLb(c)});c.addEventListener("keydown",function(e){if(e.key==="Enter")openLb(c)})});
 $("#lbx").addEventListener("click",closeLb);$("#lbp").addEventListener("click",function(e){e.stopPropagation();step(-1)});$("#lbn").addEventListener("click",function(e){e.stopPropagation();step(1)});
 lb.addEventListener("click",function(e){if(e.target===lb)closeLb()});
+var tx=null;lb.addEventListener("touchstart",function(e){tx=e.touches[0].clientX},{passive:true});lb.addEventListener("touchend",function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>50)step(dx<0?1:-1)},{passive:true});
 document.addEventListener("keydown",function(e){if(!lb.classList.contains("on"))return;if(e.key==="Escape")closeLb();if(e.key==="ArrowLeft")step(-1);if(e.key==="ArrowRight")step(1)});
 // opening: dock, desktop icons
 $$("[data-w]").forEach(function(b){b.addEventListener("click",function(){openW(b.dataset.w)})});
@@ -141,7 +142,7 @@ function unlock(){
  later(function(){$("#menu").classList.add("in");dock.classList.add("in")},500);
  $$(".ic").forEach(function(i,n){later(function(){i.classList.add("in")},900+n*130)});
  later(function(){openW("w-about")},1300);
- later(function(){$("#toast").textContent="Welcome ♡ Open anything from the dock or desktop";$("#toast").classList.add("in")},2200);
+ later(function(){$("#toast").textContent=mob()?"Welcome ♡ Tap the dock to explore":"Welcome ♡ Open anything from the dock or desktop";$("#toast").classList.add("in")},2200);
  later(function(){$("#toast").classList.remove("in")},5600)}
 $("#lock").addEventListener("click",unlock);$("#boot").addEventListener("click",unlock);
 boot();
