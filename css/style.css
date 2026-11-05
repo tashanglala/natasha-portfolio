@@ -278,35 +278,3 @@ button,a,.cc,.ic{touch-action:manipulation;-webkit-tap-highlight-color:transpare
 .cc.pend{cursor:default;border-style:dashed}.cc.pend .dt::after{content:""}.cc.pend:hover{transform:none;box-shadow:none}
 .lkr a{display:inline-block;background:var(--deep);color:#fff;padding:6px 16px;border-radius:99px;font-size:12px;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s}.lkr a:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(214,87,138,.35)}
 .cc.nopic{cursor:default}.cc.nopic .dt::after{content:""}
-/* MOBILE DOCK — HORIZONTAL SWIPE */
-@media (max-width: 768px) {
-  #dock {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-
-    width: calc(100vw - 24px);
-    max-width: 430px;
-    box-sizing: border-box;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
-    overscroll-behavior-x: contain;
-
-    scrollbar-width: none;
-  }
-
-  #dock::-webkit-scrollbar {
-    display: none;
-  }
-
-  #dock button {
-    flex: 0 0 auto;
-    min-width: 54px;
-  }
-}
