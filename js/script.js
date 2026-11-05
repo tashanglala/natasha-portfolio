@@ -71,9 +71,9 @@ function filt(f){cfb.forEach(function(b){b.classList.toggle("on",b.dataset.f===f
  $("#cnt").textContent="Showing "+n+"."}
 cfb.forEach(function(b){b.addEventListener("click",function(){filt(b.dataset.f)})});filt("all");
 var CERT={
- "CS50's Introduction to Cybersecurity": "assets/certificates/cs50-introduction-to-cybersecurity.jpg",
- "Introduction to Critical Infrastructure Protection": "assets/certificates/introduction-to-critical-infrastructure-protection.jpg",
- "Cybersecurity (ADB Institute)": "assets/certificates/adb-institute-cybersecurity.jpg",
+ "CS50's Introduction to Cybersecurity": "/assets/certificates/cs50.jpg",
+"Introduction to Critical Infrastructure Protection": "/assets/certificates/introduction-to-critical-infrastructure-protection.jpg",
+"Cybersecurity (ADB Institute)": "/assets/certificates/adb.jpg",
  "IT Customer Support Basics": "assets/certificates/it-customer-support-basics.jpg",
  "Data Analytics Essentials": "assets/certificates/data-analytics-essentials.jpg",
  "Digital Safety and Security Awareness": "assets/certificates/digital-safety-and-security-awareness.jpg",
@@ -91,6 +91,12 @@ var CERT={
  "Data Science Essentials with Python": "assets/certificates/data-science-essentials-with-python.jpg",
  "Python Essentials 1": "assets/certificates/python-essentials-1.jpg"
 };
+// Fix certificate title mismatches
+CERT["Cybersecurity"] =
+  CERT["Cybersecurity (ADB Institute)"];
+
+CERT["CS50’s Introduction to Cybersecurity"] =
+  CERT["CS50's Introduction to Cybersecurity"];
 // lightbox
 var lb=$("#lb"),lbi=$("#lbi"),cur=null;
 function vis(){return ccs.filter(function(c){return !c.classList.contains("gone")})}
@@ -117,7 +123,7 @@ document.addEventListener("click",function(){dd.classList.remove("on");$("#apple
 var msg=$("#msg");
 function dl(){
  var t=$("#toast"),a=document.createElement("a");
- a.href="assets/Natasha-Remoto-Resume-2026.pdf";a.download="Natasha-Remoto-Resume.pdf";document.body.appendChild(a);a.click();a.remove();
+ a.href="assets/Natasha-Remoto-Resume.pdf";a.download="Natasha-Remoto-Resume.pdf";document.body.appendChild(a);a.click();a.remove();
  msg.textContent="Résumé downloading ♡";t.textContent="Résumé downloading ♡";t.classList.add("in");setTimeout(function(){t.classList.remove("in")},2600)}
 function act(a,b){
  if(a==="hi")burst(b);else if(a==="dl")dl();
