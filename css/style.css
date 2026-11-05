@@ -1,4 +1,3 @@
-
 :root{--bg1:#fff0f6;--bg2:#ffd3e5;--win:#fffafc;--ink:#4a2437;--mut:#8d5f77;--pink:#f48fb1;--deep:#d6578a;--line:#f6c6d9;--chip:#ffe9f1;--bar:rgba(255,244,249,.78);
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -278,3 +277,19 @@ button,a,.cc,.ic{touch-action:manipulation;-webkit-tap-highlight-color:transpare
 .cc.pend{cursor:default;border-style:dashed}.cc.pend .dt::after{content:""}.cc.pend:hover{transform:none;box-shadow:none}
 .lkr a{display:inline-block;background:var(--deep);color:#fff;padding:6px 16px;border-radius:99px;font-size:12px;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s}.lkr a:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(214,87,138,.35)}
 .cc.nopic{cursor:default}.cc.nopic .dt::after{content:""}
+
+/* ---- phone fixes ---- */
+.body{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+/* grid rows were collapsing (cards cut off after the emoji) */
+#w-awards .body,#w-certs .body,#w-work .body,#w-orgs .body,#w-skills .body{grid-auto-rows:max-content}
+.award,.cc,.grp{min-height:min-content}
+@media (max-width:700px){
+ /* size the window between the menu bar and the dock instead of using 100vh (wrong inside Facebook/Messenger browsers) */
+ .win,.win.max{height:auto!important;max-height:none!important;top:calc(40px + env(safe-area-inset-top,0px))!important;left:8px!important;width:calc(100% - 16px)!important;bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+ #dock{gap:4px;padding:6px 8px;max-width:calc(100% - 12px)}
+ #dock button{flex:1 1 0;width:auto;min-width:28px;max-width:42px;height:40px;font-size:20px}
+ #toast{top:calc(40px + env(safe-area-inset-top,0px))}
+ #lb figure{max-width:calc(100% - 76px)}
+ .cc,.award,.item{touch-action:pan-y}
+}
+@media (max-width:400px){#dock button{height:36px;font-size:18px}}
